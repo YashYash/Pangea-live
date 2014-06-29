@@ -1,1 +1,15 @@
 <h1>charity dashboard page</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {% for field in charity_info %}
+        <hr>
+
+        <ul class="form">
+            <li>{{ field.name }}: {{ field }}</li>
+        </ul>
+
+    {% endfor %}
+<input id="update" type="submit" value="Update"/>
+
+</form>

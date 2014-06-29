@@ -1,3 +1,9 @@
 from django.contrib import admin
+from charity_app.models import Charity
 
-# Register your models here.
+
+class CharityAdmin(admin.ModelAdmin):
+    list_display = ("name", "posted", "video")
+    search_fields = ("name",)
+
+admin.site.register(Charity, CharityAdmin)
