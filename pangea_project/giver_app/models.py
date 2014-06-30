@@ -9,9 +9,9 @@ class Giver(models.Model):
     business_url = models.CharField(max_length=200, null=True, blank=True)
     slogan = models.CharField(max_length=1000, null=True, blank=True)
     description = models.CharField(max_length=6000, null=True, blank=True)
-    cover_photo = S3DirectField(upload_to='s3direct')
-    background_image = S3DirectField(upload_to='s3direct')
-    image = S3DirectField(upload_to='s3direct')
+    cover_photo = S3DirectField(upload_to='s3direct', null=True, blank=True)
+    background_image = S3DirectField(upload_to='s3direct', null=True, blank=True)
+    image = S3DirectField(upload_to='s3direct', null=True, blank=True)
     video = models.URLField()
 
     def __unicode__(self):

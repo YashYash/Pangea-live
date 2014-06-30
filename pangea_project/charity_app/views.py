@@ -15,7 +15,7 @@ def charity_home(request):
             charity.save()
             return redirect("charity_home")
     else:
-        charity_info = CharityForm()
+    charity_info = CharityForm()
     data = {'charity_info': charity_info}
     return render(request, 'charity_home.html', data)
 
