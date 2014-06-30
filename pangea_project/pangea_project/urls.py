@@ -10,6 +10,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'user_app.views.landing', name='landing'),
+    url(r'^login/$', 'user_app.views.login', name='login'),
+    url(r'^register/$', 'user_app.views.register', name='register'),
     url(r'^giver/$', 'giver_app.views.giver_home', name='giver_home'),
     url(r'^charity/$', 'charity_app.views.charity_home', name='charity_home'),
     url(r'^s3direct/', include('s3direct.urls'))
