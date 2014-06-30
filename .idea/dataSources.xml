@@ -5,7 +5,7 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/pangea_database</jdbc-url>
-      <user-name>yash</user-name>
+      <user-name>aakashjapi</user-name>
       <libraries />
     </data-source>
   </component>

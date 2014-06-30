@@ -39,8 +39,16 @@ INSTALLED_APPS = (
     'charity_app',
     'giver_app',
     'user_app',
-    'south'
+    'south',
+    's3direct'
 )
+
+AWS_SECRET_ACCESS_KEY = 'hQewlp/tx5114lnfO6FNT7SA+zvxhrtCruQwo6MU'
+AWS_ACCESS_KEY_ID = 'AKIAJKNN6S276LTSNWRA'
+AWS_STORAGE_BUCKET_NAME = 'uploadedimages123'
+S3DIRECT_ENDPOINT = 's3-us-west-1.amazonaws.com'
+S3DIRECT_UNIQUE_RENAME = True
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -63,7 +71,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pangea_database',
-        'USER': "yash",
+        'USER': "aakashjapi",
         'PASSWORD':"",
         "HOST":"127.0.0.1",
         "PORT": ""
