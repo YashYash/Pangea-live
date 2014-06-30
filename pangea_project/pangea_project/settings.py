@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'giver_app',
     'user_app',
     'south',
-    's3direct'
+    's3direct',
+    'registration'
 )
 
 AWS_SECRET_ACCESS_KEY = 'hQewlp/tx5114lnfO6FNT7SA+zvxhrtCruQwo6MU'
@@ -105,5 +106,14 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+LOGIN_REDIRECT_URL = "index"
+import smtplib
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+smtp=smtplib.SMTP(host=EMAIL_HOST,port=EMAIL_PORT)
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "foundersofpangea@gmail.com"
+EMAIL_HOST_PASSWORD = 'pang3aunit3'
 
+ACCOUNT_ACTIVATION_DAYS=7
 
