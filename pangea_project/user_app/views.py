@@ -2,14 +2,13 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-
 # Create your views here.
-from auth_app import forms
-from auth_app.forms import SignupForm, LoginForm
+from user_app.forms import SignupForm, LoginForm
 
 
 def signup(request):
     if request.method == "POST":
+        print("request was made")
         form = SignupForm(request.POST)
         if form.is_valid():
             user = User.objects.create_user(
@@ -43,7 +42,7 @@ def login1(request):
     else:
         form1 = LoginForm()
     data = {'form1': form1}
-    return render(request, "login.html", data)
+    return render(request, "secret", data)
 
 
 def index(request):

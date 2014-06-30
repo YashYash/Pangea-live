@@ -30,15 +30,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'charity_app',
+    'giver_app',
+    'user_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'charity_app',
-    'giver_app',
-    'user_app',
     'south',
     's3direct',
     'registration'
@@ -72,7 +72,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pangea_database',
-        'USER': "aakashjapi",
+        'USER': "yash",
         'PASSWORD':"",
         "HOST":"127.0.0.1",
         "PORT": ""
