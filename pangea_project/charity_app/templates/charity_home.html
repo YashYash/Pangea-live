@@ -1,15 +1,29 @@
-<h1>charity dashboard page</h1>
+{% extends "global.html" %}
+{% load staticfiles %}
 
-<form method="post">
-    {% csrf_token %}
-    {% for field in charity_info %}
-        <hr>
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/charity_home.css" %}">
+{% endblock %}
 
-        <ul class="form">
-            <li>{{ field.name }}: {{ field }}</li>
-        </ul>
+{% block nav-list-items %}
+    <li><a href="{% url 'landing' %}" class="white medium-font light">User</a></li>
+    <li><a href="{% url 'charity_home' %}" class="medium-font light blue">Charity</a></li>
+    <li><a href="{% url 'giver_home' %}" class="medium-font light white">Giver</a></li>
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <h1>charity dashboard page</h1>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in charity_info %}
+                <hr>
 
-    {% endfor %}
-<input id="update" type="submit" value="Update"/>
+                <ul class="form">
+                    <li>{{ field.name }}: {{ field }}</li>
+                </ul>
 
-</form>
+            {% endfor %}
+        <input id="update" type="submit" value="Update"/>
+        </form>
+    </div>
+{% endblock %}
