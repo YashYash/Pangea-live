@@ -63,7 +63,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pangea_database',
-        'USER': "yash",
+        'USER': "sahil",
         'PASSWORD':"",
         "HOST":"127.0.0.1",
         "PORT": ""
