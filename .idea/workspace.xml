@@ -47,16 +47,25 @@
       <file leaf-file-name="global.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/templates/global.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="7" selection-start="795" selection-end="795" vertical-scroll-proportion="-16.304348" vertical-offset="0" max-vertical-offset="465">
+            <state line="25" column="7" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="36" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.05923345" vertical-offset="744" max-vertical-offset="1605">
+            <state line="53" column="36" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1605">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="1" selection-start="642" selection-end="642" vertical-scroll-proportion="0.1733436" vertical-offset="0" max-vertical-offset="1298">
               <folding />
             </state>
           </provider>
@@ -74,16 +83,7 @@
       <file leaf-file-name="global.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/templates/global.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="17" selection-start="0" selection-end="795" vertical-scroll-proportion="-10.434783" vertical-offset="0" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charity_home.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/static/css/charity_home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="16" column="17" selection-start="0" selection-end="795" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -92,7 +92,7 @@
       <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/static/jquery/jquery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="141990">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="142170">
               <folding />
             </state>
           </provider>
@@ -101,7 +101,7 @@
       <file leaf-file-name="landing.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pangea_project/user_app/templates/landing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
               <folding />
             </state>
           </provider>
@@ -126,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pangea_project/pangea_project/settings.py" />
         <option value="$PROJECT_DIR$/pangea_project/user_app/views.py" />
         <option value="$PROJECT_DIR$/pangea_project/user_app/templates/landing.html" />
         <option value="$PROJECT_DIR$/pangea_project/charity_app/templates/home.html" />
@@ -139,9 +138,10 @@
         <option value="$PROJECT_DIR$/pangea_project/charity_app/views.py" />
         <option value="$PROJECT_DIR$/pangea_project/charity_app/templates/global.html" />
         <option value="$PROJECT_DIR$/pangea_project/charity_app/static/css/global.css" />
-        <option value="$PROJECT_DIR$/pangea_project/pangea_project/urls.py" />
         <option value="$PROJECT_DIR$/pangea_project/charity_app/templates/charity_home.html" />
         <option value="$PROJECT_DIR$/pangea_project/giver_app/templates/global.html" />
+        <option value="$PROJECT_DIR$/pangea_project/pangea_project/settings.py" />
+        <option value="$PROJECT_DIR$/pangea_project/pangea_project/urls.py" />
       </list>
     </option>
   </component>
@@ -434,27 +434,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pangea" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -480,7 +460,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pangea" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -611,15 +611,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-586" y="-1418" width="2558" height="1418" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25755167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25953895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -628,9 +627,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -650,6 +650,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/static/css/charity_home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/static/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="142170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pangea_project/user_app/templates/landing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="63" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="315">
@@ -659,51 +687,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="426" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="405">
-          <folding />
-        </state>
+        <state line="15" column="40" selection-start="426" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/templates/charity_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
-          <folding />
-        </state>
+        <state line="14" column="7" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="17" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/templates/giver_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/user_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/user_app/templates/landing.html">
@@ -739,37 +753,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="47" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="47" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/templates/giver_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/user_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/user_app/templates/landing.html">
@@ -807,16 +811,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="34" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/templates/charity_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="0" column="21" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/wsgi.py">
@@ -835,23 +835,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/user_app/templates/landing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/user_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/wsgi.py">
@@ -868,9 +864,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="17" column="24" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/forms.py">
@@ -880,16 +874,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="426" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
+        <state line="15" column="40" selection-start="426" selection-end="436" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/static/jquery/jquery.js">
@@ -899,25 +889,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/templates/giver_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="839">
-          <folding />
-        </state>
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="839" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/templates/charity_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="-18.913044" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
+        <state line="29" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="-18.913044" vertical-offset="0" max-vertical-offset="525" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/static/css/global.css">
@@ -950,21 +929,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/charity_app/templates/global.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="0" selection-end="795" vertical-scroll-proportion="-10.434783" vertical-offset="0" max-vertical-offset="465">
+        <state line="16" column="17" selection-start="0" selection-end="795" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/giver_app/templates/global.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="7" selection-start="795" selection-end="795" vertical-scroll-proportion="-16.304348" vertical-offset="0" max-vertical-offset="465">
+        <state line="25" column="7" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="36" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.05923345" vertical-offset="744" max-vertical-offset="1605">
+        <state line="53" column="36" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pangea_project/pangea_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="1" selection-start="642" selection-end="642" vertical-scroll-proportion="0.1733436" vertical-offset="0" max-vertical-offset="1298">
           <folding />
         </state>
       </provider>
