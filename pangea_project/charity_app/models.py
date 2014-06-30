@@ -12,8 +12,17 @@ class Charity(models.Model):
     cover_photo = S3DirectField(upload_to='s3direct')
     background_image = S3DirectField(upload_to='s3direct')
     image = S3DirectField(upload_to='s3direct')
-    video = models.URLField()
 
     def __unicode__(self):
         return self.name
 
+
+class Video(models.Model):
+    charity = models.ForeignKey(Charity, related_name="charities")
+    title = models.CharField(max_length=250)
+    posted = models.DateTimeField(auto_now=True)
+    video_url = models.URLField()
+    description = models.CharField(max_length=200, null=True)
+
+    def __unicode__(self):
+        return self.title

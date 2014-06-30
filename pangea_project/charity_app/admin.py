@@ -1,9 +1,16 @@
 from django.contrib import admin
-from charity_app.models import Charity
+from charity_app.models import Charity, Video
 
 
 class CharityAdmin(admin.ModelAdmin):
-    list_display = ("name", "posted", "video")
+    list_display = ("name", "posted")
     search_fields = ("name",)
 
+
+class VideoAdmin(admin.ModelAdmin):
+    list_display = ("title", "posted", "charity")
+    search_fields = ("title",)
+
+
 admin.site.register(Charity, CharityAdmin)
+admin.site.register(Video, VideoAdmin)
