@@ -60,6 +60,16 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+)
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1528965467327552'
+SOCIAL_AUTH_FACEBOOK_SECRET = '667619f8a2385262098b1638d541170c'
+
+
 ROOT_URLCONF = 'pangea_project.urls'
 
 WSGI_APPLICATION = 'pangea_project.wsgi.application'
@@ -106,7 +116,12 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-LOGIN_REDIRECT_URL = "index"
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = "login"
+LOGIN_URL = 'auth_login'
+
+
 import smtplib
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -117,3 +132,15 @@ EMAIL_HOST_PASSWORD = 'pang3aunit3'
 
 ACCOUNT_ACTIVATION_DAYS=7
 
+
+
+AUTHENTICATION_BACKENDS = (
+      'social.backends.facebook.FacebookOAuth2',
+      'django.contrib.auth.backends.ModelBackend',
+)
+
+
+FACEBOOK_AUTH_EXTRA_ARGUMENTS = {'display': 'popup'}
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
