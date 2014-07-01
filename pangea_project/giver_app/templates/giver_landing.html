@@ -1,0 +1,15 @@
+{% extends "global.html" %}
+{% load staticfiles %}
+
+{% block css %}
+{% endblock %}
+
+{% block nav-list-items %}
+
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <h1>Giver landing page</h1>
+        <a href="{% url 'giver_create' %}" class="medium-font light">Create</a>
+    </div>
+{% endblock %}

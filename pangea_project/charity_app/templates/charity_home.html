@@ -6,13 +6,11 @@
 {% endblock %}
 
 {% block nav-list-items %}
-    <li><a href="{% url 'landing' %}" class="white medium-font light">User</a></li>
-    <li><a href="{% url 'charity_home' %}" class="medium-font light blue">Charity</a></li>
-    <li><a href="{% url 'giver_home' %}" class="medium-font light white">Giver</a></li>
+
 {% endblock %}
 {% block content %}
     <div class="content">
-        <h1>charity dashboard page</h1>
+        <h1>Create charity</h1>
         <form method="post">
             {% csrf_token %}
             {% for field in charity_info %}

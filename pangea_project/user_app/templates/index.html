@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 Welcome to Pangea
+
+<a href="{% url 'giver_landing' %}" class="medium-font light white">Giver</a>
+<a href="{% url 'charity_landing' %}" class="medium-font light white">Charity</a>
 {% endblock %}

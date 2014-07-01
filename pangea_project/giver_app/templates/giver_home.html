@@ -2,22 +2,19 @@
 {% load staticfiles %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static "css/charity_home.css" %}">
 {% endblock %}
 
 {% block nav-list-items %}
-    <li><a href="{% url 'landing' %}" class="white medium-font light">User</a></li>
-    <li><a href="{% url 'charity_home' %}" class="medium-font light white">Charity</a></li>
-    <li><a href="{% url 'giver_home' %}" class="medium-font light blue">Giver</a></li>
+
 {% endblock %}
 {% block content %}
     <div class="content">
-        <h1>charity dashboard page</h1>
+        <h1>Giver Create</h1>
         <form method="post">
             {% csrf_token %}
             {% for field in giver_info %}
                 <hr>
-
+                <h1> {{ activeuser.username }}</h1>
                 <ul class="form">
                     <li>{{ field.name }}: {{ field }}</li>
                 </ul>

@@ -11,9 +11,17 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^login/$', 'user_app.views.login1', name='login1'),
     # url(r'^register/$', 'user_app.views.signup', name='signup'),
+
+
     url('', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^giver/$', 'giver_app.views.giver_home', name='giver_home'),
-    url(r'^charity/$', 'charity_app.views.charity_home', name='charity_home'),
+
+
+    url(r'^giver/create/$', 'giver_app.views.giver_create', name='giver_create'),
+    url(r'^giver/$', 'giver_app.views.giver_landing', name='giver_landing'),
+    url(r'^charity/create/$', 'charity_app.views.charity_create', name='charity_create'),
+    url(r'^charity/$', 'charity_app.views.charity_landing', name='charity_landing'),
+
+
     url(r'^secret/$', 'user_app.views.special_page', name='secret'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^$', 'user_app.views.index', name='index'),
