@@ -50,6 +50,15 @@ AWS_STORAGE_BUCKET_NAME = 'uploadedimages123'
 S3DIRECT_ENDPOINT = 's3-us-west-1.amazonaws.com'
 S3DIRECT_UNIQUE_RENAME = True
 
+ACCOUNT_ACTIVATION_DAYS=7
+
+AUTHENTICATION_BACKENDS = (
+      'social.backends.facebook.FacebookOAuth2',
+      'django.contrib.auth.backends.ModelBackend',
+)
+
+
+FACEBOOK_AUTH_EXTRA_ARGUMENTS = {'display': 'popup'}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -64,7 +73,12 @@ ROOT_URLCONF = 'pangea_project.urls'
 
 WSGI_APPLICATION = 'pangea_project.wsgi.application'
 
+SOCIAL_AUTH_FACEBOOK_KEY = '1528965467327552'
+SOCIAL_AUTH_FACEBOOK_SECRET = '667619f8a2385262098b1638d541170c'
 
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'login'
+LOGIN_REDIRECT_URL = "home"
+LOGIN_URL = 'auth_login'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 

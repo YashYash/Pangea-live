@@ -4,6 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url('', include('social.apps.django_app.urls', namespace='social')),
     # Examples:
     # url(r'^$', 'pangea_project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
