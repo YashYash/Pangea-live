@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     's3direct',
-    'registration'
+    'registration',
+    'embed_video'
 )
 
 AWS_SECRET_ACCESS_KEY = 'hQewlp/tx5114lnfO6FNT7SA+zvxhrtCruQwo6MU'
@@ -63,6 +64,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'social.apps.django_app.context_processors.backends',
+    'django.core.context_processors.request',
     'social.apps.django_app.context_processors.login_redirect',
 )
 

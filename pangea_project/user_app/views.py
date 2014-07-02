@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 # Create your views here.
 from user_app.forms import SignupForm, LoginForm
+from charity_app.models import Video
 
 
 def signup(request):
@@ -46,6 +47,8 @@ def login1(request):
 
 
 def index(request):
-    data = {}
+    all_videos = Video.objects.all()
+    data = {'all_videos' : all_videos}
+    print("this is index.html")
     return render(request, 'index.html', data)
 

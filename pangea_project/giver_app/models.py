@@ -1,6 +1,7 @@
 from django.db import models
 from s3direct.fields import S3DirectField
 from charity_app.models import Charity
+from django.contrib.auth.models import User
 
 
 class Giver(models.Model):
@@ -14,6 +15,7 @@ class Giver(models.Model):
     image = S3DirectField(upload_to='s3direct', null=True, blank=True)
     video = models.URLField()
     charities = models.ManyToManyField(Charity, related_name="givers")
+    user = models.OneToOneField(User, related_name="giver", null=True, blank=True)
 
     def __unicode__(self):
         return self.name
