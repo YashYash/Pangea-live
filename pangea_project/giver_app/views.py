@@ -8,17 +8,24 @@ from django.contrib.auth.models import User
 
 @login_required
 def giver_create(request):
-    if request.method == 'POST':
-        giver_info = GiverForm(request.POST)
-        if giver_info.isValid():
-            giver = giver_info.save(commit=false)
-            giver.save()
-            return redirect("giver_home")
+    giver = Giver.objects.get(id=1)
+    if request.method == "POST":
+        giver_info = GiverForm(request.POST, instance=giver)
+        if giver_info.is_valid():
+            if giver_info.save():
+                return redirect("charity_dashboard")
     else:
-        giver_info = GiverForm()
-    activeuser = request.user.activeuser
-    data = {'giver_info': giver_info, 'activeuser': activeuser}
+        giver_info = GiverForm(instance=giver)
+    data = {'giver_info': giver_info, "giver": giver}
     return render(request, 'giver_home.html', data)
 
 def giver_landing(request):
     return render(request, 'giver_landing.html')
+
+@login_required
+def giver_dashboard(request):
+    giver = request.user.giver
+    data = {"giver":giver}
+    return render(request, 'giver_dashboard.html', data)
+
+

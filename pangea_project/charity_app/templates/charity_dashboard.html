@@ -1,0 +1,17 @@
+{% load embed_video_tags %}
+{% if user.is_authenticated %}
+(<a href="{% url 'auth_logout' %}">Log out</a>
+{% else %}
+{% endif %}
+<h1>This is the dashboard page</h1>
+<h1>Welcome to your dashboard "{{ user.username }}"</h1>
+<p>You have registered "{{ charity.name }}" as a charity</p>
+<a href="{% url 'charity_create' %}">Edit your account</a>
+{{ charity.id }}
+{% for video in videos %}
+    {% video video.video_embed 'small' %}
+{% endfor %}
+
+{% for giver in givers %}
+    <h1>{{ giver.name }}</h1>
+{% endfor %}

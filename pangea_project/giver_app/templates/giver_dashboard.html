@@ -1,0 +1,17 @@
+{% if user.is_authenticated %}
+(<a href="{% url 'auth_logout' %}">Log out</a>
+{% else %}
+{% endif %}
+
+<h1>This is the giver dashboard</h1>
+
+<h1>Welcome to your dashboard {{ giver.name }}</h1>
+
+These are the charities that you are currently dontaiting to.
+<ul>
+{% for charity in giver.charities.all %}
+    <li>{{ charity.name }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'giver_create' %}">Edit your account</a>
