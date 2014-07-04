@@ -2,6 +2,9 @@ from django.conf.urls import patterns, include, url
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
 admin.autodiscover()
+from tastypie.api import Api
+
+
 
 urlpatterns = patterns('',
     # Examples:
@@ -18,13 +21,16 @@ urlpatterns = patterns('',
 
     url(r'^giver/create/$', 'giver_app.views.giver_create', name='giver_create'),
     url(r'^giver/$', 'giver_app.views.giver_landing', name='giver_landing'),
+
+    url(r'^charity/dashboard/$', 'charity_app.views.charity_dashboard', name='charity_dashboard'),
     url(r'^charity/create/$', 'charity_app.views.charity_create', name='charity_create'),
     url(r'^charity/$', 'charity_app.views.charity_landing', name='charity_landing'),
 
+    url(r'^$', 'user_app.views.home_page', name='home_page'),
 
     url(r'^secret/$', 'user_app.views.special_page', name='secret'),
     url(r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^$', 'user_app.views.index', name='index'),
+
     url(r'^accounts/password/change/$',
         auth_views.password_change,
         name='password_change'),

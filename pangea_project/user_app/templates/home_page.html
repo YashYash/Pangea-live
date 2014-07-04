@@ -1,10 +1,9 @@
-{% extends 'base.html' %}
+
 {% load embed_video_tags %}
 {% block content %}
 Welcome to Pangea
 <h1>Hello world</h1>
-<a href="{% url 'giver_landing' %}" class="medium-font light white">Giver</a>
-<a href="{% url 'charity_landing' %}" class="medium-font light white">Charity</a>
+
 
     {% for video in all_videos %}
         <h1>{{ video.title }}</h1>

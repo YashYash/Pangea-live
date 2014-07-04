@@ -6,6 +6,11 @@ from django.contrib.auth.models import User
 import requests
 from django.shortcuts import render, redirect
 from charity_app.forms import CharityForm
+from charity_app.models import Video
+
+
+def charity_landing(request):
+    return render(request, 'charity_landing.html')
 
 @login_required
 def charity_create(request):
@@ -21,5 +26,6 @@ def charity_create(request):
     return render(request, 'charity_home.html', data)
 
 
-def charity_landing(request):
-    return render(request, 'charity_landing.html')
+@login_required
+def charity_dashboard(request):
+    return render(request, 'charity_dashboard.html')
