@@ -77,9 +77,6 @@ ROOT_URLCONF = 'pangea_project.urls'
 WSGI_APPLICATION = 'pangea_project.wsgi.application'
 
 
-
-
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 

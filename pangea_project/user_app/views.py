@@ -46,9 +46,9 @@ def login1(request):
     return render(request, "secret", data)
 
 
-def home_page(request):
+def index(request):
     all_videos = Video.objects.all()
     data = {'all_videos' : all_videos}
-    print("this is home_page.html")
-    return render(request, 'home_page.html', data)
+    print("this is index.html")
+    return render(request, 'index.html', data)
 
