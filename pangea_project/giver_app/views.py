@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 # Create your views here.
 
 @login_required
-def giver_create(request):
-    giver = Giver.objects.get(id=1)
+def giver_create(request, giver_id):
+    giver = Giver.objects.get(id=giver_id)
     if request.method == "POST":
         giver_info = GiverForm(request.POST, instance=giver)
         if giver_info.is_valid():

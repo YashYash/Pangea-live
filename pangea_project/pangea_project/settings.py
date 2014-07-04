@@ -42,7 +42,9 @@ INSTALLED_APPS = (
     'south',
     's3direct',
     'registration',
-    'embed_video'
+    'embed_video',
+    'tastypie',
+    'tastypie_swagger'
 )
 
 AWS_SECRET_ACCESS_KEY = 'hQewlp/tx5114lnfO6FNT7SA+zvxhrtCruQwo6MU'
@@ -76,6 +78,9 @@ ROOT_URLCONF = 'pangea_project.urls'
 
 WSGI_APPLICATION = 'pangea_project.wsgi.application'
 
+TASTYPIE_FULL_DEBUG = True
+
+TASTYPIE_SWAGGER_API_MODULE = "pangea_project.urls.v1_api"
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases

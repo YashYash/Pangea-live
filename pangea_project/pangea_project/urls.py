@@ -1,7 +1,23 @@
 from django.conf.urls import patterns, include, url
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
+from tastypie.api import Api
+from charity_app.api.resources import CharityResource, CharityfullResource, UserResource, VersionResource
+from giver_app.api.resources import GiverResource, GiverfullResource
+
 admin.autodiscover()
+
+
+#api urls
+
+v1_api = Api(api_name="v1")
+v1_api.register(CharityResource())
+v1_api.register(CharityfullResource())
+v1_api.register(GiverfullResource())
+v1_api.register(GiverResource())
+
+v1_api.register(UserResource())
+v1_api.register(VersionResource())
 
 urlpatterns = patterns('',
     # Examples:
@@ -16,7 +32,7 @@ urlpatterns = patterns('',
     url('', include('social.apps.django_app.urls', namespace='social')),
 
 
-    url(r'^giver/create/$', 'giver_app.views.giver_create', name='giver_create'),
+    url(r'^giver/create/(?P<giver_id>\w+)/$', 'giver_app.views.giver_create', name='giver_create'),
     url(r'^giver/$', 'giver_app.views.giver_landing', name='giver_landing'),
     url(r'^giver/dashboard/$', 'giver_app.views.giver_dashboard', name='giver_dashboard'),
 
@@ -49,5 +65,8 @@ urlpatterns = patterns('',
         name='password_reset_confirm'),
     url(r'', include('registration.backends.default.urls')),
 
-    url(r'^s3direct/', include('s3direct.urls'))
+    url(r'^s3direct/', include('s3direct.urls')),
+    url(r'^api/', include(v1_api.urls)),
+
+
 )

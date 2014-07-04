@@ -14,4 +14,6 @@ These are the charities that you are currently dontaiting to.
 {% endfor %}
 </ul>
 
-<a href="{% url 'giver_create' %}">Edit your account</a>
+{{giver.id }}
+
+<a href="{% url 'giver_create' giver.id %}">Edit your account</a>
