@@ -12,8 +12,8 @@ from charity_app.models import Charity
 
 
 @login_required
-def charity_create(request):
-    charity = Charity.objects.get(id=3)
+def charity_create(request, charity_id):
+    charity = Charity.objects.get(id=charity_id)
     if request.method == "POST":
         charity_info = CharityForm(request.POST, instance=charity)
         if charity_info.is_valid():

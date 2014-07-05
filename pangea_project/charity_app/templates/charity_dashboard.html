@@ -1,4 +1,26 @@
 {% load embed_video_tags %}
+{% load staticfiles %}
+{% load static %}
+
+<html ng-app="charity_dashboard_app">
+    <head>
+       <script src="{% static 'jquery/jquery.js' %}"></script>
+       <script src="{% static 'jquery/jquery.min.js' %}"></script>
+        <!--angular javascript stuff-->
+        <script src="{% static 'js/vendor/angular.js' %}"></script>
+        <script src="{% static 'js/vendor/angular-route.js' %}"></script>
+        <script src="{% static 'js/vendor/angular-resource.js' %}"></script>
+        <script src="{% static 'js/app.js' %}"></script>
+        <script src="{% static 'js/controllers/charityController.js' %}"></script>
+
+    </head>
+    angular up here
+    <body>
+        <div ng-view></div>
+    </body>
+</html>
+
+This is django down here
 {% if user.is_authenticated %}
 (<a href="{% url 'auth_logout' %}">Log out</a>
 {% else %}
@@ -6,11 +28,12 @@
 <h1>This is the dashboard page</h1>
 <h1>Welcome to your dashboard "{{ user.username }}"</h1>
 <p>You have registered "{{ charity.name }}" as a charity</p>
-<a href="{% url 'charity_create' %}">Edit your account</a>
+<a href="{% url 'charity_create' charity.id%}">Edit your account</a>
 {{ charity.id }}
 {% for video in videos %}
     {% video video.video_embed 'small' %}
-{% endfor %}
+    {{ video.posted }}
+\d{% endfor %}
 
 {% for giver in givers %}
     <h1>{{ giver.name }}</h1>
