@@ -44,7 +44,8 @@ INSTALLED_APPS = (
     'registration',
     'embed_video',
     'tastypie',
-    'tastypie_swagger'
+    'tastypie_swagger',
+    'djangobower'
 )
 
 AWS_SECRET_ACCESS_KEY = 'hQewlp/tx5114lnfO6FNT7SA+zvxhrtCruQwo6MU'
@@ -124,10 +125,16 @@ STATIC_ROOT = 'staticfiles'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'djangobower.finders.BowerFinder'),
 )
 
+BOWER_COMPONENTS_ROOT = 'desktop/pangea/pangea_project/components/'
 
+BOWER_PATH = '/usr/bin/bower'
 
+BOWER_INSTALLED_APPS = (
+    'videosharing-embed'
+)
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'login'
 LOGIN_REDIRECT_URL = "login"

@@ -1,9 +1,41 @@
-<!DOCTYPE html>
-<html>
+{% load i18n %}
+{% load staticfiles %}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-    <title></title>
+    <title>{% block title %}User test{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static "css/global.css" %}">
+
+    {% block css %}{% endblock %}
+
+    <script type="text/javascript" src="{% static "jquery/jquery.min.js" %}"></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    {% block script %}{% endblock %}
 </head>
+
 <body>
+    <ul id="nav" class="no-margin no-padding">
+        {% block nav-list-items %}{% endblock %}
+    </ul>
+    <div id="header">
+        {% block header %}
+	<a href="{% url 'index' %}">{% trans "Home" %}</a> |
+	{% if user.is_authenticated %}
+	{% trans "Logged in" %}: {{ user.username }}
+	(<a href="{% url 'auth_logout' %}">{% trans "Log out" %}</a> |
+	<a href="{% url 'auth_password_change' %}">{% trans "Change password" %}</a>)
+	{% else %}
+	<a href="{% url 'auth_login' %}">{% trans "Log in" %}</a>
+	{% endif %}
+	<hr />
+        {% endblock %}
+    </div>
+
+    {% block content %}{% endblock %}
 
 </body>
+
 </html>

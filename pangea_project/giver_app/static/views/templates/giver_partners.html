@@ -1,0 +1,17 @@
+<h1>Our partners</h1>
+
+<div ng-repeat="charity in charities">
+    {{ charity.charity.name }}
+    <br>
+    {{ charity.title }}
+    <br>
+    {{ charity.video_url }}
+    <br>
+    {{ charity.posted }}
+    <br>
+    <p>Giver giving to this charity</p>
+    <div ng-repeat="giver in {{ chairty.charity.giver }}">
+        {{ giver.name }}
+    </div>
+
+</div>

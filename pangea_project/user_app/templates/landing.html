@@ -1,6 +1,61 @@
-<h1>Pangea</h1><br>
-<a href="/login">Login to your account</a><br>
-<a href="/register">Register for an account</a>
+{% extends 'global.html' %}
+{% load embed_video_tags %}
+{% load staticfiles %}
+{% load static %}
+{% block css %}
+        <link rel="stylesheet" href="{% static "css/landing.css" %}">
+{% endblock %}
 
-<a href="{% url 'giver_home' %}" class="medium-font light white">Giver</a>
-<a href="{% url 'charity_home' %}" class="medium-font light white">Giver</a>
+{% block script %}
+        <script type="text/javascript" src="{% static "js/scripts/landing.js" %}"></script>
+{% endblock %}
+
+{% block nav-list-items %}
+    <li><a href="{% url 'giver_landing' %}" class="medium-font light white">Giver</a></li>
+    <li><a href="{% url 'charity_landing' %}" class="medium-font light white">Charity</a></li>
+
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'auth_logout' %}">Log out</a></li>
+    {% else %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+Welcome to Pangea
+    <div class="content">
+        <html ng-app="user_landing_app">
+            <head>
+               <script src="{% static 'jquery/jquery.js' %}"></script>
+               <script src="{% static 'jquery/jquery.min.js' %}"></script>
+                <!--angular javascript stuff-->
+                <script src="{% static 'js/vendor/angular.js' %}"></script>
+                <script src="{% static 'js/vendor/angular-route.js' %}"></script>
+                <script src="{% static 'js/vendor/angular-resource.js' %}"></script>
+                <script src="{% static 'js/userapp.js' %}"></script>
+                <script src="{% static 'js/controllers/landingController.js' %}"></script>
+                <script src="{% static 'js/controllers/charitylandingController.js' %}"></script>
+                <script src="{% static 'js/controllers/giverlandingController.js' %}"></script>
+
+            </head>
+            <body>
+                <div ng-view></div>
+            </body>
+        </html>
+
+    {% for video in all_videos %}
+        <h1>{{ video.title }}</h1>
+        <h3>Uploaded: {{ video.posted }}</h3>
+        <p>Description: {{ video.description }}</p>
+        <h1>Uploaded by {{ video.charity.name }}</h1>
+        <a href="{{ video.charity.charity_url }}">Go to there site</a>
+        <p>The charities description: {{ video.charity.description }}</p>
+        <p>{{ video.charity.name }}'s slogan: {{ video.charity.slogan }}</p>
+        <h1>The video</h1>
+        <p>{{ video.video_url }}</p>
+        <h1>{{ video.video_embed }}</h1>
+        {% video video.video_embed 'small' %}
+
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}

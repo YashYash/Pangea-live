@@ -25,10 +25,6 @@ def signup(request):
     return render(request, "signup.html", data)
 
 
-@login_required
-def special_page(request):
-    data = {}
-    return render(request, "special.html", data)
 
 def login1(request):
     if request.method == "POST":
@@ -38,16 +34,16 @@ def login1(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect("secret")
+                    return redirect("landing")
 
     else:
         form1 = LoginForm()
     data = {'form1': form1}
-    return render(request, "secret", data)
+    return render(request, "landing", data)
 
 
-def index(request):
+def landing(request):
     all_videos = Video.objects.all()
     data = {'all_videos' : all_videos}
-    return render(request, 'index.html', data)
+    return render(request, 'landing.html', data)
 

@@ -1,0 +1,21 @@
+This is where the angular videos will go
+
+<div ng-repeat="item in all">
+
+    <hr>
+    <h1 class="font big" id="move">{{ item.title }}</h1>
+
+    <div>
+        <a href="#/charity/details/{{ item.charity.id }}/"></a>
+    </div>
+    <iframe width="70%" height="60%" src="{{ item.test_url }}"></iframe>
+    {{ item.trusted_url }}
+    {{ item.test_url }}
+    <embed-video href="{{ item.trusted_url }}" width="400" height="400" ></embed-video>
+    <br>
+
+    <h3 class="font normal">For every 10 likes and shares , <a class="links" href="#/giver/details/{{ item.random_giver.id }}/">{{ item.random_giver.name }}</a> ,will donate 10 cents to the <a class="links" href="#/charity/details/{{ item.charity.id }}/">{{ item.charity.name }}</a>
+    </h3>
+
+
+</div>
