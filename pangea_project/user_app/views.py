@@ -49,6 +49,5 @@ def login1(request):
 def index(request):
     all_videos = Video.objects.all()
     data = {'all_videos' : all_videos}
-    print("this is index.html")
     return render(request, 'index.html', data)
 

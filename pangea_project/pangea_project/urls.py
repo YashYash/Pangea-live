@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
 from tastypie.api import Api
-from charity_app.api.resources import CharityResource, CharityfullResource, UserResource, VersionResource
+from charity_app.api.resources import CharityResource, CharityfullResource, UserResource, VersionResource, VideoResource
 from giver_app.api.resources import GiverResource, GiverfullResource
 from pangea_project import settings
 
@@ -16,7 +16,7 @@ v1_api.register(CharityResource())
 v1_api.register(CharityfullResource())
 v1_api.register(GiverfullResource())
 v1_api.register(GiverResource())
-
+v1_api.register(VideoResource())
 v1_api.register(UserResource())
 v1_api.register(VersionResource())
 
@@ -29,19 +29,15 @@ urlpatterns = patterns('',
     # url(r'^login/$', 'user_app.views.login1', name='login1'),
     # url(r'^register/$', 'user_app.views.signup', name='signup'),
 
-
     url('', include('social.apps.django_app.urls', namespace='social')),
-
 
     url(r'^giver/create/(?P<giver_id>\w+)/$', 'giver_app.views.giver_create', name='giver_create'),
     url(r'^giver/$', 'giver_app.views.giver_landing', name='giver_landing'),
     url(r'^giver/dashboard/$', 'giver_app.views.giver_dashboard', name='giver_dashboard'),
 
-
     url(r'^charity/create/(?P<charity_id>\w+)$', 'charity_app.views.charity_create', name='charity_create'),
     url(r'^charity/$', 'charity_app.views.charity_landing', name='charity_landing'),
     url(r'^charity/dashboard/$', 'charity_app.views.charity_dashboard', name='charity_dashboard'),
-
 
     url(r'^secret/$', 'user_app.views.special_page', name='secret'),
     url(r'^accounts/', include('registration.backends.default.urls')),

@@ -4,17 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
+
     <title>{% block title %}{% endblock %}</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static "css/global.css" %}">
+
     {% block css %}{% endblock %}
+
     <script type="text/javascript" src="{% static "jquery/jquery.min.js" %}"></script>
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
+    {% block script %}{% endblock %}
 
 </head>
 
 <body>
-    <ul id="nav">
+    <ul id="nav" class="no-margin no-padding">
         {% block nav-list-items %}{% endblock %}
     </ul>
 

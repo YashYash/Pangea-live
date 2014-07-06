@@ -1,0 +1,23 @@
+<h1>These are the angular charity details</h1>
+
+<h3>Your info</h3>
+{{ charity.name }}
+{{ charity.slogan }}
+<br>
+<h3>Your videos</h3>
+<div ng-repeat="video in videos">
+    {{ video.title }}
+    <br>
+    {{ video.url }}
+    <br>
+    {{ video.posted }}
+    <br>
+    <br>
+</div>
+<br>
+<h3>Your current givers:</h3>
+<div ng-repeat="giver in givers">
+    {{ giver.name }}
+</div>
+<br>
+<a href="/charity/create/{{ charity.id }}">Edit your account</a>

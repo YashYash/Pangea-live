@@ -33,9 +33,12 @@ class GiverResource(ModelResource):
 
 
 class VideoResource(ModelResource):
+    charity = ToOneField(CharityResource, 'charity', full=True)
+
     class Meta:
         queryset = Video.objects.all()
-        resource_name = "charity"
+        resource_name = "videos"
+        allowed_methods = ['get', 'post']
 
 
 class UserResource(ModelResource):
