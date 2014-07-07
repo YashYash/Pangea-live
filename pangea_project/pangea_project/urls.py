@@ -35,10 +35,12 @@ urlpatterns = patterns('',
     url(r'^giver/$', 'giver_app.views.giver_landing', name='giver_landing'),
     url(r'^giver/dashboard/$', 'giver_app.views.giver_dashboard', name='giver_dashboard'),
 
-
+    url(r'^charity/like/(?P<charity_id>\w+)$', 'user_app.views.charity_like', name='charity_like'),
     url(r'^charity/create/(?P<charity_id>\w+)$', 'charity_app.views.charity_create', name='charity_create'),
     url(r'^charity/$', 'charity_app.views.charity_landing', name='charity_landing'),
     url(r'^charity/dashboard/$', 'charity_app.views.charity_dashboard', name='charity_dashboard'),
+
+
 
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^$', 'user_app.views.landing', name='landing'),

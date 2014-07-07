@@ -136,8 +136,8 @@ BOWER_INSTALLED_APPS = (
     'videosharing-embed'
 )
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'login'
-LOGIN_REDIRECT_URL = "login"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = 'landing'
+LOGIN_REDIRECT_URL = "landing"
 LOGIN_URL = 'auth_login'
 
 

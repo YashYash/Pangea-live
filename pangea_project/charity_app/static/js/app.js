@@ -13,6 +13,10 @@ charity_dashboard_app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: '/static/views/templates/charity_analytics.html',
         controller: 'charityController'
     });
+    $routeProvider.when('/charity/account/:id', {
+        templateUrl: '/static/views/templates/charity_account.html',
+        controller: 'charityaccountController'
+    });
 
 }]);
 

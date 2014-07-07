@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 # Create your views here.
 from user_app.forms import SignupForm, LoginForm
-from charity_app.models import Video
+from charity_app.models import Video, Charity
 
 
 def signup(request):
@@ -47,3 +47,8 @@ def landing(request):
     data = {'all_videos' : all_videos}
     return render(request, 'landing.html', data)
 
+
+def charity_like(request, charity_id):
+    charity = Charity.objects.get(id=charity_id)
+    data = {"charity": charity}
+    return render(request, 'charity_like.html', data)

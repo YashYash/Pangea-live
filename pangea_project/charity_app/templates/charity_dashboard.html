@@ -12,6 +12,7 @@
     <li><a href="#/">Partners</a></li>
     <li><a href="#/charity/{{ charity.id }}">Profile</a></li>
     <li><a href="#/charity/analytics/{{ charity.id }}">Analytics</a></li>
+    <li><a href="#/charity/account/{{ charity.id }}">Account</a></li>
     {% if user.is_authenticated %}
         <li><a href="{% url 'auth_logout' %}">Log out</a></li>
     {% else %}
@@ -30,6 +31,7 @@
                 <script src="{% static 'js/app.js' %}"></script>
                 <script src="{% static 'js/controllers/charityController.js' %}"></script>
                 <script src="{% static 'js/controllers/charityfullController.js' %}"></script>
+                <script src="{% static 'js/controllers/charityaccountController.js' %}"></script>
 
             </head>
             <body>

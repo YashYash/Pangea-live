@@ -1,0 +1,13 @@
+{% extends "global.html" %}
+
+{% block content %}
+<h1>THis is the charity like page</h1>
+
+<h1>Facebook like button</h1>
+<h1>Twitter button</h1>
+<h1>Share to whatever button</h1>
+Thanks you <span class="bold">{{ user.username }}</span>, for instigating the transaction to <span class="bold">{{ charity.name }}</span>
+
+<button id="like_increment"></button>
+
+{% endblock %}

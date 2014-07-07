@@ -14,6 +14,7 @@ class Charity(models.Model):
     cover_photo = S3DirectField(upload_to='s3direct', null=True, blank=True)
     background_image = S3DirectField(upload_to='s3direct', null=True, blank=True)
     image = S3DirectField(upload_to='s3direct', null=True, blank=True)
+    total_likes = models.IntegerField(max_length=15, null=True, default=0)
     user = models.OneToOneField(User, related_name="charity", null=True, blank=True)
 
     def __unicode__(self):

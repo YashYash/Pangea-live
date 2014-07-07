@@ -1,21 +1,35 @@
-This is where the angular videos will go
-
-<div ng-repeat="item in all">
-
-    <hr>
-    <h1 class="font big" id="move">{{ item.title }}</h1>
-
-    <div>
-        <a href="#/charity/details/{{ item.charity.id }}/"></a>
-    </div>
-    <iframe width="70%" height="60%" src="{{ item.test_url }}"></iframe>
-    {{ item.trusted_url }}
-    {{ item.test_url }}
-    <embed-video href="{{ item.trusted_url }}" width="400" height="400" ></embed-video>
+<center>
+    <h1 class="light">Pangea Videos</h1>
     <br>
+    <input id="custom" type="text" ng-model="searchText" placeholder="Search for a Video" id="Search">
+    <div ng-repeat="item in all|filter:searchText">
+        <my-widget>
+            <div id="overlay-like"></div>
+        <hr>
+        <h1 class="font big light" id="move">{{ item.title }}</h1>
 
-    <h3 class="font normal">For every 10 likes and shares , <a class="links" href="#/giver/details/{{ item.random_giver.id }}/">{{ item.random_giver.name }}</a> ,will donate 10 cents to the <a class="links" href="#/charity/details/{{ item.charity.id }}/">{{ item.charity.name }}</a>
-    </h3>
+        <div>
+            <a href="#/charity/details/{{ item.charity.id }}/"></a>
+        </div>
+        <iframe width="70%" height="60%" src="{{ item.trusted_url }}"></iframe>
+        <embed-video href="{{ item.trusted_url }}" width="400" height="400" ></embed-video>
+        <br>
+        <h3 class="font normal">For every 10 likes and shares , <a class="links" href="#/giver/details/{{ item.random_giver.id }}/">{{ item.random_giver.name }}</a> ,will donate 10 cents to the <a class="links" href="#/charity/details/{{ item.charity.id }}/">{{ item.charity.name }}</a>
+        </h3>
+         <button ng-click="like_popup({{ item.charity.id }})">Angular like popup</button>
+         <a href="#/charity/likes/{{ item.charity.id }}">Like this video Angular</a>
+         <br>
+         <a href="charity/like/{{ item.charity.id }}">Like this video Django</a>
 
+        <button type="button" class="like" ng-click="charityLike({{ item.charity.id }})">Like this video to make the transaction happen</button>
+        Total like: {{ item.charity.total_likes }}
+        <div class="frame-container">
+            <h1 class="white center"> Thank you for liking the video</h1>
+            <iframe class="fadein" href="#/charity/likes/{{ item.charity.trusted_id }}" scrolling="no" frameborder="0"></iframe>
+            <button class="center relative">This the official like button</button>
+        </div>
 
-</div>
+        </my-widget>
+
+    </div>
+</center>

@@ -19,4 +19,9 @@ user_landing_app.config(['$routeProvider', function ($routeProvider) {
         controller: 'giverlandingController'
     });
 
+    $routeProvider.when('/charity/likes/:id', {
+        templateUrl: '/static/views/templates/likes.html',
+        controller: 'likesController'
+    });
 }]);
+
